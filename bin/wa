@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+var commander = require('commander');
+var wa = require('..');
+require('colorful').toxic();
+
+commander
+  .version(require('../package').version)
+  .usage('[init|info]')
+  .parse(process.argv);
+
+commander.on('--help', function() {
+  console.log('  $'.green + ' wa');
+  console.log('  $'.green + ' wa init');
+  console.log('  $'.green + ' wa info');
+  console.log();
+});
+
+commander.parse(process.argv);
+
+if (commander.args[0] === 'init') {
+  wa.init();
+} else if (commander.args[0] === 'info') {
+  wa.info();
+} else if (commander.args[0] === 'help') {
+  console.log();
+  console.log('  A super convenience watch and upload tool.'.cyan);
+  commander.help();
+} else {
+  wa.watch();
+}

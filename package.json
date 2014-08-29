@@ -1,0 +1,30 @@
+{
+  "name": "wa",
+  "version": "0.1.3",
+  "description": "A super convenience watch and upload tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:afc163/wa.git"
+  },
+  "author": "afc163 <afc163@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">= 0.8.1"
+  },
+  "dependencies": {
+    "watch": "^0.10.0",
+    "colorful": "^2.1.0",
+    "commander": "^2.2.0",
+    "prompt": "^0.2.12",
+    "ssh2": "^0.3.0",
+    "minimatch": "^0.3.0"
+  },
+  "bin": {
+    "wa": "bin/wa"
+  }
+}
